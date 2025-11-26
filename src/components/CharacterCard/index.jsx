@@ -14,7 +14,7 @@ export const CharacterCard = ({
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false);
 
-  // Leer favoritos del localStorage
+  // Obtener favoritos del localStorage
   const getFavorites = () => {
     return JSON.parse(localStorage.getItem("favorites")) || [];
   };

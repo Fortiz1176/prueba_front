@@ -18,8 +18,8 @@ export const useFavorites = () => {
     loadFavorites();
 
     // Detectar cambios de localStorage hechos en otras pestañas
-    const handleStorageChange = (e) => {
-      if (e.key === "favorites") {
+    const handleStorageChange = (event) => {
+      if (event.key === "favorites") {
         loadFavorites();
       }
     };
@@ -36,6 +36,6 @@ export const useFavorites = () => {
 
   return {
     favorites,
-    reloadFavorites: loadFavorites, // opcional si quieres recargar manualmente
+    reloadFavorites: loadFavorites,
   };
 };

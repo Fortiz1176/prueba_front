@@ -85,7 +85,6 @@ export const ModalGlobal = ({
           </h3>
         </div>
 
-        {/* Información en badges */}
         <div className="px-6 pb-6 grid grid-cols-2 gap-3">
           {status && (
             <div className="col-span-1">
