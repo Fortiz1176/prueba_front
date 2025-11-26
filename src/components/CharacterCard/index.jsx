@@ -54,7 +54,7 @@ export const CharacterCard = ({
   return (
     <div
       onClick={onClick}
-      className="cursor-pointer p-4 bg-white rounded-lg shadow hover:shadow-md transition relative"
+      className="cursor-pointer p-4 bg-white rounded-lg shadow hover:shadow-md transition relative animate-fade-in"
     >
       <img
         src={image}

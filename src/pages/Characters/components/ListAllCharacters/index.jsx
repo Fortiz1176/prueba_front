@@ -5,7 +5,6 @@ import { CiSearch } from "react-icons/ci";
 import { CiStar } from "react-icons/ci";
 import ModalGlobal from "../../../../components/Modals/ModalGlobal";
 import { useNavigate } from "react-router-dom";
-import { useFavorites } from "../../../Favorites/hooks/useFavorites"; // <--- Importa tu hook
 import { CharacterCard } from "../../../../components/CharacterCard/index";
 
 const ListAllCharacters = () => {
@@ -36,7 +35,7 @@ const ListAllCharacters = () => {
     
   };
 
-  // Función para obtener los números de página con elipsis
+  // Función para obtener los números de página
   const getPageNumbers = () => {
     const pages = [];
     const showEllipsis = totalPages > 7;
@@ -65,7 +64,7 @@ const ListAllCharacters = () => {
     return pages;
   };
   if (isLoading)
-    return <p className="text-center text-gray-500 mt-20">⏳ Cargando...</p>;
+    return <p className="text-center text-gray-500 mt-20 flex justify-center">⏳ Cargando...</p>;
   if (error)
     return <p className="text-center text-red-500 mt-20">❌ Error: {error}</p>;
 
