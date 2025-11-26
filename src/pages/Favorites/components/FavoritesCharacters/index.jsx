@@ -21,39 +21,11 @@ const FavoritesCharacters = () => {
     setModalCharacter(false);
   };
 
-  // Función para obtener los números de página con elipsis
-  /* const getPageNumbers = () => {
-    const pages = [];
-    const showEllipsis = totalPages > 7;
-
-    if (!showEllipsis) {
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
-    } else {
-      if (page <= 3) {
-        pages.push(1, 2, "...", totalPages);
-      } else if (page >= totalPages - 2) {
-        pages.push(
-          1,
-          "...",
-          totalPages - 3,
-          totalPages - 2,
-          totalPages - 1,
-          totalPages
-        );
-      } else {
-        pages.push(1, "...", page - 1, page, page + 1, "...", totalPages);
-      }
-    }
-
-    return pages;
-  }; */
+  };
   const filtered = favorites.filter((char) =>
     char.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  /* const pageNumbers = getPageNumbers(); */
 
   console.log(favorites);
   return (
@@ -113,8 +85,6 @@ const FavoritesCharacters = () => {
           </div>
         ))}
       </div>
-
-      {/* PAGINACIÓN */}
 
       {/* MODAL */}
       {currentCharacter && (

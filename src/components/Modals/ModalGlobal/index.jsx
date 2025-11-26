@@ -40,7 +40,7 @@ export const ModalGlobal = ({
   return ReactDOM.createPortal(
     <div
       id="modal"
-      className={`fixed inset-0 flex items-center justify-center overflow-auto bg-black/60 backdrop-blur-sm z-50 ${
+      className={`animate-fade-in fixed inset-0 flex items-center justify-center overflow-auto bg-black/90 backdrop-blur-md z-50 ${
         isOpen
           ? "animate__animated animate__fadeIn"
           : "animate__animated animate__fadeOut"
