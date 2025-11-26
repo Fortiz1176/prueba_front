@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { CharactersContext } from "../../context";
+import { CharactersContext } from "../../context/CharactersProvider";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { CiStar } from "react-icons/ci";

@@ -1,8 +1,18 @@
 import { useEffect, useState, useCallback } from "react";
-import type { ApiResponse, Character } from "../types/characters";
+/* import type { ApiResponse, Character } from "../types/characters"; */
+
+import { useGetCharactersQuery } from "../services/charactersApiSlice"
+import { useParams } from "react-router-dom";
 
 export const useCharacters = () => {
-  const [data, setData] = useState<Character[]>([]);
+
+  const { id } = useParams();
+
+  const { data, error, isLoading } = useGetCharactersQuery({ id }, { skip: !id });
+
+  console.log(data)
+
+  /* const [data, setData] = useState<Character[]>([]);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [page, setPage] = useState<number>(1);
 
@@ -42,19 +52,19 @@ export const useCharacters = () => {
 
   const prevPage = () => {
     if (page > 1) setPage((prev) => prev - 1);
-  };
+  }; */
 
   return {
     state: {
       data,
       error,
       isLoading,
-      refetch: fetchCharacters, 
+      /* refetch: fetchCharacters, 
       page,
       setPage,
       totalPages,
       nextPage,
-      prevPage,
+      prevPage, */
     },
   };
 };

@@ -6,7 +6,7 @@ import App from './app/index'
 import { Provider } from 'react-redux';
 import { store } from './api/store';
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
       <App />

@@ -4,8 +4,8 @@ import { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import { routesAuth } from '../../routes/index';
 
-const LazyCharacters = lazy(() => import('../../pages/Characters'));
-const LazyFavorites = lazy(()=> import("../../pages/Favorites"));
+const LazyCharacters = lazy(() => import('../../pages/Characters/index.jsx'));
+const LazyFavorites = lazy(()=> import("../../pages/Favorites/index.jsx"));
 
 
 export const AuthRoutes = () => {
