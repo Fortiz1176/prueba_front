@@ -6,6 +6,5 @@ export const routesApp = {
 };
 export const routesAuth = {
   Characters: "characters",
-  ids: [], 
   Favorites: "favorites"
 };
