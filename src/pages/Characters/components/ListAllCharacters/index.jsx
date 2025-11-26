@@ -25,7 +25,6 @@ const ListAllCharacters = () => {
   } = useContext(CharactersContext);
 
   console.log(data);
-  const { toggleFavorite, isFavorite } = useFavorites();
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [currentCharacter, setCurrentCharacter] = useState(null);
