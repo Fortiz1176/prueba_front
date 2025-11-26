@@ -32,7 +32,6 @@ const ListAllCharacters = () => {
 
   const handleCloseModal = () => {
     setModalCharacter(false);
-    
   };
 
   // Función para obtener los números de página

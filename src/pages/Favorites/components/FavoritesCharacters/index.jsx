@@ -4,7 +4,6 @@ import ModalGlobal from "../../../../components/Modals/ModalGlobal";
 import { useNavigate } from "react-router-dom";
 // Asumiendo que CharacterCard fue modificado para recibir charData
 import { CharacterCard } from "../../../../components/CharacterCard/index";
-import { CiSearch } from "react-icons/ci";
 import { GrHomeRounded } from "react-icons/gr";
 
 const FavoritesCharacters = () => {
@@ -21,7 +20,6 @@ const FavoritesCharacters = () => {
     setModalCharacter(false);
   };
 
-  };
   const filtered = favorites.filter((char) =>
     char.name.toLowerCase().includes(search.toLowerCase())
   );
